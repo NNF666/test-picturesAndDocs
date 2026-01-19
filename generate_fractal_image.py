@@ -127,8 +127,12 @@ def generate_fractal_image(file_path, target_size_kb, image_format='jpeg'):
         os.unlink(temp_path)
 
 # 生成多种格式的图片，目标大小均为100KB
-generate_fractal_image('100k.gif', 100, 'gif')
-generate_fractal_image('100k.jpeg', 100, 'jpeg')
-generate_fractal_image('100k.jpg', 100, 'jpeg')
-generate_fractal_image('100k.png', 100, 'png')
-generate_fractal_image('100k.webp', 100, 'webp')
+def generate_all_formats():
+    generate_fractal_image('100k.gif', 100, 'gif')
+    generate_fractal_image('100k.jpeg', 100, 'jpeg')
+    generate_fractal_image('100k.jpg', 100, 'jpeg')
+    generate_fractal_image('100k.png', 100, 'png')
+    generate_fractal_image('100k.webp', 100, 'webp')
+
+if __name__ == "__main__":
+    generate_all_formats()
